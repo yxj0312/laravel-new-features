@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 /*
 |--------------------------------------------------------------------------
@@ -13,4 +13,14 @@
 
 Route::get('/', function () {
     return view('welcome');
+});
+// New Features 1-Sanitzing-Middleware
+
+
+Route::get('form',function() {
+	return view('form');
+});
+
+Route::post('form',function() {
+	return request()->all();
 });

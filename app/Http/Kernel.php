@@ -16,7 +16,10 @@ class Kernel extends HttpKernel
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
+        // New Features 1-Sanitzing-Middleware
+        // Can igore uneccesray space input
         \App\Http\Middleware\TrimStrings::class,
+        // if a empty string is submitted, it will convert to null, without it will be ""
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
     ];
 
