@@ -24,20 +24,24 @@ use Facades\App\Services\Twitter;
 Route::get('/', function () {
     return view('welcome');
 });
-// New Features 1-Sanitzing-Middleware
 
+Route::name('login')->get('/login',function(){
+	return view('layout');
+});
+
+
+//New Feature: object based facade
 Route::get('facade',function(){
 	Twitter::publish('Here is my status');
-
 	// When u use it this way, u can still test it
 	// i.e.
 	// Twitter::shouldReceive('publish')->with();
 });
 
+// New Features 1-Sanitzing-Middleware
 Route::get('form',function() {
 	return view('form');
 });
-
 Route::post('form',function() {
 	return request()->all();
 });

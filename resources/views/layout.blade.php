@@ -24,9 +24,12 @@
             </div>
         @endif
         <div class="content">
-        	@hasSection('page_content')
-	            <div class="title m-b-md">
-	                @yield('content')
+            <div id='app'>
+                <example></example>
+            </div>
+            @hasSection('page_content')
+                <div class="title m-b-md">
+                    @yield('content')
 	            </div>
 	        @endif
 	        @hasSection('page_link')
@@ -36,4 +39,5 @@
             @endif
         </div>
     </div>
+    <script src="{{ mix('js/app.js') }}"></script>
 </body>

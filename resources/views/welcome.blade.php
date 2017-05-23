@@ -81,7 +81,9 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
-
+                {{-- <div id='app'>
+                        <notification></notification>
+                </div> --}}
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
@@ -91,5 +93,6 @@
                 </div>
             </div>
         </div>
+    <script src="{{ mix('js/app.js') }}"></script>
     </body>
 </html>
