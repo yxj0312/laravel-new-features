@@ -16,5 +16,5 @@ mix.js('resources/assets/js/app.js', 'public/js')
    .combine(['./node_modules/font-awesome/css/font-awesome.min.css',
    			'./node_modules/alertify.js/dist/css/alertify.css'
    		],'public/css/libs.css')
-   .copy('./node_modules/font-awesome/fonts', 'public/fonts')
+   // .copy('./node_modules/font-awesome/fonts', 'public/fonts')
    .sourceMaps();
