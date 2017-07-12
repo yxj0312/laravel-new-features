@@ -15,6 +15,7 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         'App\Events\PostWasPublished' => [
             'App\Listeners\NotifyBlogSubscriber',
+            'App\Listeners\CheckForSpam',
         ],
     ];
 
