@@ -17,6 +17,10 @@ class EventServiceProvider extends ServiceProvider
             'App\Listeners\NotifyBlogSubscriber',
             'App\Listeners\CheckForSpam',
         ],
+
+        'App\Events\CheckForLogin' =>[
+            'App\Listeners\SendLoginNotification',
+        ]
     ];
 
     /**
