@@ -20,7 +20,15 @@ class EventServiceProvider extends ServiceProvider
 
         'App\Events\CheckForLogin' =>[
             'App\Listeners\SendLoginNotification',
-        ]
+        ],
+
+        'App\Events\UserLoggedIn' => [
+            'App\Listeners\WriteMessageToFile',
+        ],
+    ];
+
+    protected   $subscribe = [
+
     ];
 
     /**
