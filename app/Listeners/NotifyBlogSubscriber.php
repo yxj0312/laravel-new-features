@@ -32,6 +32,6 @@ class NotifyBlogSubscriber implements ShouldQueue
     public function handle(PostWasPublished $event)
     {
         var_dump('I am sending an email to the blog subscribers about this post');
-        var_dump($event->post->toArray());
+        // var_dump($event->post->toArray());
     }
 }
